@@ -44,7 +44,6 @@ A GPU runtime is effectively required (`fp16=True` in `TrainingArguments`, and t
 **Work in progress / rough proof-of-concept.** The notebook has been run end-to-end at least once (training completed and text was generated from a saved checkpoint in the committed output), but it has several issues that would need cleanup before this is a polished project:
 
 - No `requirements.txt`/environment file — dependencies are only pinned implicitly by what happened to be installed in the Colab session that produced the checked-in output.
-- The generation cell hardcodes `device="cuda"`, so it will fail on a CPU-only or non-CUDA environment.
 - No train/eval metrics, loss curves, or evaluation results are surfaced beyond raw Trainer output.
 - Sample generation output in the notebook is low quality (the model trails off into blank lines), suggesting undertraining or a tokenization/generation issue that hasn't been addressed.
 - No modularized scripts — everything lives in one notebook, no separate training/inference scripts or tests.
