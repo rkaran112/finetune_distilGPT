@@ -37,7 +37,7 @@ This project is a single notebook designed to run on Google Colab (it includes a
    - Save the resulting model to `./finetuned_model`.
 3. In the final cell, enter a text prompt when asked (`Enter text:`) to generate a continuation with the fine-tuned model.
 
-A GPU runtime is effectively required (`fp16=True` in `TrainingArguments`, and the generation cell hardcodes `device="cuda"`).
+A GPU runtime is effectively required (`fp16=True` in `TrainingArguments`), though the generation cell falls back to CPU if no GPU is available.
 
 ## Status
 
