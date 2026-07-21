@@ -10,7 +10,7 @@ The notebook (`finetune_distilGPT.ipynb`) walks through:
 2. Loading the `mikasenghaas/wikitext-2` dataset (train/validation/test splits) via `datasets`.
 3. Tokenizing the text (max length 512, padded, with `labels` set for causal LM training).
 4. Wrapping the base model with a LoRA adapter (`peft`, `r=8`, `lora_alpha=16`, `lora_dropout=0.1`).
-5. Fine-tuning with Hugging Face `Trainer` (3 epochs, batch size 8, fp16, `Trainer`/`TrainingArguments`, `Accelerator`).
+5. Fine-tuning with Hugging Face `Trainer` (3 epochs, batch size 8, fp16, `Trainer`/`TrainingArguments`).
 6. Saving the fine-tuned model to `./finetuned_model`.
 7. Running interactive text generation: prompts for input text and generates a continuation with the fine-tuned model (temperature 0.7, top-k 50, top-p 0.9, repetition penalty 1.2).
 
